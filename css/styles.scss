@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&display=swap');
+
+body {
+  height: 100vh;    // vh = the entire view of the window
+  margin: 0;
+  font-family: 'Poppins', Arial;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+// HEADER ----------------------------------------------
+.header {
+    background-color: darkslategray;
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        padding: 25px;
+    
+        .logo {
+            margin-left: 10px;
+            font-size: 40px;
+            font-weight: bold;
+            color: white;
+            
+            span {
+                color: deeppink;
+                font-weight: lighter;
+            }
+        }
+    
+        ul {
+            display: flex;
+    
+            a {
+                display: flex;
+                margin: 1em 3em;
+                color: white;
+
+                &:hover {
+                    color: deeppink;
+                }
+            }
+        }
+
+        ul.show {
+            display: block;
+        }
+
+        .socials {
+            display: flex;
+            
+            a {
+                font-size: 25px;
+                color: white;
+                margin: 8px 16px 0 16px;
+        
+                &:hover {
+                    color: deeppink;
+                }
+            }
+        }
+
+        .hamburger {
+            display: none;
+        }
+    }
+
+    @media only screen and (max-width: 1000px) {
+        nav {
+            display: flex;
+            background-color: darkslategray;
+    
+            ul {
+                display: none;
+            }
+    
+            .socials {
+                display: none;
+            }
+    
+            .hamburger {
+                display: block;
+                border: 0;
+                background-color: transparent;
+                color: white;
+                font-size: 30px;
+                cursor: pointer;
+
+                &:hover {
+                    color: deeppink;
+                }
+            }
+        }
+    }
+}
+
+// HERO --------------------------------------------------------
+.hero {
+    background-color: rgb(65, 110, 110);
+    color: white;
+    height: 100vh;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+
+    .intro {
+        margin-top: 100px;
+        margin-bottom: 100px;
+        margin-left: 100px;
+        margin-right: 50px;
+
+        h2 {
+            font-size: 35px;
+            margin: 0px;
+        }
+    
+        h1 {
+            font-size: 90px;
+            margin: 0px;
+
+            span {
+                color: deeppink;
+            }
+        }
+        
+        button {
+            width: 100px;
+            height: 50px;
+            border: 0px;
+            background-color: black;
+            cursor: pointer;
+
+            a {
+                color: white;
+                font-family: 'Poppins';
+            }
+            
+            &:hover {
+                background-color: deeppink;
+            }
+        }
+    }
+}
+
+// ABOUT ------------------------------------------------------
+.about {
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+
+    .information {
+        display: grid;
+        margin-left: 100px;
+        margin-right: 100px;
+        margin-bottom: 50px;
+
+        h2 {
+            margin-bottom: 0px;
+            font-size: 70px;
+            color: white;
+
+            span {
+                color: deeppink;
+                font-weight: lighter;
+            }
+        }
+
+        p {
+            font-size: 35px;
+            color: white;
+        }
+    }
+}
+
+// SKILLS ------------------------------------------------------
+.skills {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+
+    .skill-content {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        width: 90%;
+        margin: 50px;
+
+        h2 {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            margin-left: 15px;
+            font-size: 60px;
+            color: white;
+        }
+
+        .rectangle {
+            width: 8px;
+            height: 180px;
+            margin-left: 50px;
+            background-color: deeppink;
+        }
+
+        .skill-cards {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+
+            .skill-card {
+                display: grid;
+                justify-content: center;
+                margin-bottom: 20px;
+                width: 180px;
+                height: 250px;
+                background-color: #0f0f0f;
+
+                .lang {
+                    margin-top: 20px;
+                    width: 120px;
+                    height: 120px;
+                }
+
+                h1 {
+                    text-align: center;
+                    font-size: 20px;
+                    color: white;
+                }
+            }
+        }
+
+        @media only screen and (max-width: 1000px) {
+            .skill-cards {
+                display: flex;
+                flex-wrap: wrap;
+            }
+        }
+    }
+}
+
+// PROJECTS ----------------------------------------------------
+.projects {
+    background-color: cadetblue;
+
+    .project-content {
+        display: grid;
+        margin-left: 80px;
+        margin-right: 80px;
+        padding-bottom: 50px;
+
+        h2 {
+            margin-top: 40px;
+            margin-bottom: 30px;
+            font-size: 50px;
+            
+            color: white;
+            
+            span {
+                font-weight: lighter;
+                color: deeppink;
+            }
+        }
+    
+        .project-cards {
+            display: flex;
+            justify-content: space-between;
+    
+            .project-card {
+                display: grid;
+                justify-content: center;
+                width: 300px;
+                height: 550px;
+                margin-bottom: 10px;
+                background-color: darkslategray;
+
+                img {
+                    width: 300px;
+                    height: 300px;
+                }
+
+                .card-info {
+                    display: grid;
+                    justify-content: space-around;
+                    margin: 20px;
+
+                    h1 {
+                        margin-top: 0;
+                        font-size: 25px;
+                        color: white;
+                    }
+
+                    p {
+                        margin-top: 0;
+                        margin-bottom: 10px;
+                        color: white;
+                    }
+
+                    a {
+                        color: deeppink;
+                    }
+                }
+            }
+        }
+
+        @media only screen and (max-width: 1000px) {
+            .project-cards {
+                display: flex;
+                flex-wrap: wrap;
+            }
+        }
+    }
+}
+
+// FOOTER -----------------------------------------------------
+footer {
+    height: 200px;
+    background-color: darkslategrey;
+
+    .footer-content {
+        display: grid;
+        justify-content: center;
+        padding-top: 30px;
+
+        h1 {
+            margin-top: 0;
+            text-align: center;
+            color: white;
+        }
+
+        h2 {
+            margin: 0;
+            text-align: center;
+            font-weight: lighter;
+            color: white;
+
+            span {
+                font-weight: bold;
+                color: deeppink;
+            }
+        }
+    }
+}
