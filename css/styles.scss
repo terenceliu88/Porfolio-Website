@@ -215,7 +215,8 @@ a {
 
         .skill-cards {
             display: flex;
-            justify-content: space-around;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
             width: 100%;
 
             .skill-card {
@@ -274,7 +275,8 @@ a {
     
         .project-cards {
             display: flex;
-            justify-content: space-between;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
     
             .project-card {
                 display: grid;
